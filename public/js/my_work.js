@@ -88,7 +88,7 @@ function onMouseMove() {
 }
 
 function main() {
-    loadSlide(1);
+    loadSlide(0);
     image.style.opacity = 1;
     setTimeout(() => {
         document.addEventListener('mousemove', onMouseMove);

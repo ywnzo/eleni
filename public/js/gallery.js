@@ -9,7 +9,7 @@ var images = [
     'weird.png', 'writing.png'
 ];
 
-var currentIndex = -1;
+var currentIndex = 0;
 var isShown = false;
 
 function loadImage(value) {

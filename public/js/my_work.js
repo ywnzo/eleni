@@ -47,7 +47,7 @@ var slides = [
     },
 ]
 
-var currentIndex = -1;
+var currentIndex = 0;
 
 var isShown = false;
 

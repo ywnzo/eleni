@@ -35,7 +35,7 @@ html, body {
     height: 100vh;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -121,7 +121,7 @@ nav div {
     align-items: center;
     justify-content: center;
     background-color: var(--color-main);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 1;
 }
 #burger-menu a {
@@ -134,6 +134,14 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+a {
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    color: var(--color-text-sec);
+
 }
 
 .clickable {
@@ -180,7 +188,7 @@ main {
 
 #image-wrapper .text-wrapper {
     width: calc(var(--width-content));
-    max-height: calc(100vh - 32rem);
+    max-height: calc(100vh - 28rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -200,7 +208,7 @@ main {
 }
 
 #image-wrapper .text-wrapper p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 #image-wrapper .text-wrapper a {
     color: var(--color-text-main);

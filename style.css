@@ -186,7 +186,7 @@ a:hover {
 
 #image-wrapper .text-wrapper {
     width: calc(var(--width-content));
-    max-height: calc(100vh - 28rem);
+    max-height: calc(100vh - 22rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;

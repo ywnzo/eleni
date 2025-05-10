@@ -8,19 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd483a54f1.js" crossorigin="anonymous"></script>
+    
     <script src="public/js/gallery.js" defer></script>
+    <script src="public/js/hamburger_menu.js" defer></script>
 
     <title>Dance, Reflect & Play</title>
 </head>
 <body>
     <header>
         <nav>
-            <h1 class="clickable"><a href="index.html" >Eleni</a></h1>
+            <a id="logo" class="clickable" href="index.html"><img src="public/img/favicon.png" alt=""></a>
             <div>
                 <a href="workshop.html" class="clickable">Workshop</a>
                 <a href="work.html" class="clickable">My Work</a>
                 <a href="gallery.html" class="clickable">Gallery</a>
                 <a href="contact.html" class="clickable">Contact</a>
+
+                <div id="burger-wrapper">
+                    <i id="burger-closed" class="fa-solid fa-bars"></i>
+                    <i id="burger-opened" class="fa-solid fa-x"></i>
+                </div>
+
+                <div id="burger-menu">
+                    <a href="workshop.html" class="clickable">Workshop</a>
+                    <a href="work.html" class="clickable">My Work</a>
+                    <a href="gallery.html" class="clickable">Gallery</a>
+                    <a href="contact.html" class="clickable">Contact</a>
+                </div>
             </div>
         </nav>
     </header>

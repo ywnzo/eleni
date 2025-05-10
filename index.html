@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="public/css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd483a54f1.js" crossorigin="anonymous"></script>
+
     <script src="public/js/page_load.js" defer></script>
+    <script src="public/js/hamburger_menu.js" defer></script>
 
     <title>Dance, Reflect & Play</title>
 </head>
@@ -17,12 +21,24 @@
 <body>
     <header>
         <nav>
-            <h1 class="clickable"><a href="index.html">Eleni</a></h1>
+            <a id="logo" class="clickable" href="index.html"><img src="public/img/favicon.png" alt=""></a>
             <div>
                 <a href="workshop.html" class="clickable">Workshop</a>
                 <a href="work.html" class="clickable">My Work</a>
                 <a href="gallery.html" class="clickable">Gallery</a>
                 <a href="contact.html" class="clickable">Contact</a>
+
+                <div id="burger-wrapper">
+                    <i id="burger-closed" class="fa-solid fa-bars"></i>
+                    <i id="burger-opened" class="fa-solid fa-x"></i>
+                </div>
+
+                <div id="burger-menu">
+                    <a href="workshop.html" class="clickable">Workshop</a>
+                    <a href="work.html" class="clickable">My Work</a>
+                    <a href="gallery.html" class="clickable">Gallery</a>
+                    <a href="contact.html" class="clickable">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -31,25 +47,34 @@
         <div id="image-wrapper">
             <img id="image" src="public/img/about.png" alt="">
 
-            <div id="text-wrapper">
-                <h1>Eleni Freskou</h1>
-                <p> Is a dance teacher and dancer who has been dancing for over a decade.
-                    She has studied and gained inspiration from numerous great dance pedagogues, improvisators and
-                    choreographers, such as Vitoria Kotsalou, David Zambrano and Olga Spiraki.
-                    She has created various video - dance and dance - performance pieces and taught to many little and
-                    not so little dancers in Athens.
-                </p>
+            <div id="content-wrapper">
+                <div class="text-wrapper">
+                   <h1>Eleni Freskou</h1>
+                    <p> I am a dance teacher and dancer with a vision of using dance as a means to release, develop and enjoy.
+                        I have studied and gained inspiration from numerous great dance pedagogues, improvisators and
+                        choreographers, such as Vitoria Kotsalou, David Zambrano and Olga Spiraki.
+                        I have created various video - dance and dance - performance pieces and taught little and
+                        not so little dancers in Athens.
+                    </p>
 
-                <p>She has received a dance teacher diploma from “Aktina Professional dance school” after a 3-year long
-                    intensive program (2023) and a Bachelor’s degree in English Language and Literature from the
-                    “National Kapodistrian University of Athens” (2024). Since then she keeps on deepening and expanding
-                    her practice as well as her creativity in her own artistic works by doing daily research and
-                    experimentation and attending workshops all over Europe.
-                </p>
+                    <p>I have received a dance teacher diploma from “Aktina Professional dance school” after a 3-year long
+                        intensive program (2023) and a Bachelor’s degree in English Language and Literature from the
+                        “National Kapodistrian University of Athens” (2024). Since then I keep on deepening and expanding
+                        my practice as well as my creativity in my own artistic works by doing daily research and
+                        experimentation and attending workshops all over Europe.
+                    </p>
 
-                <p>In 2025 she taught a “Dance, reflect and play” workshop to about 20 dancers in the "Spring yoga &
-                    dance festival of Ostrava" and she received very positive and sweet feedback from the participants.
-                </p>
+                    <p>In 2025 I taught a “Dance, reflect and play” workshop in the "Spring yoga &
+                        dance festival" of Ostrava.
+                    </p>
+                </div>
+
+                <div class="text-wrapper" style="width: var(--upcoming-width)">
+                    <h2>Upcoming Workshops</h2>
+                    <p>19/5 - 30/6 - Six meetings</p>
+                    <p>First lesson 19/5. The rest of the days to be decided</p>
+                    <p><a href="https://g.co/kgs/j57umF9" target="_blank">BoCirk Academy Ostrava - Hlavní 34, 742 85, Ostrava-Vřesina </a></p>
+                </div>
             </div>
         </div>
     </main>

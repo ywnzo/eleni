@@ -1,5 +1,5 @@
 const image = document.querySelector('#image')
-const text_wrapper = document.querySelector('#text-wrapper')
+const text_wrapper = document.querySelector('.text-wrapper')
 
 const slide_left = document.querySelector('#slide-left');
 const slide_right = document.querySelector('#slide-right');
@@ -16,7 +16,7 @@ var slides = [
         'header': 'Elies',
         'img': 'olives.png',
         'text': `<p>I found this little poem written by my grandmother:</p>
-                 <p>Im giving you this photograph taken by a machine, and if I die, it will be your souvenir.</p>
+                 <p>"Im giving you this photograph taken by a machine, and if I die, it will be your souvenir."</p>
                  <p>This video is dedicated to my grandmother. It depicts how we live in a colorful present while always staying in touch with memories of all kinds—those we create and later rediscover when opening our notebooks and sketch pads.</p>`,
     },
     {
@@ -36,7 +36,7 @@ var slides = [
     {
         'header': 'ICDNIFOTC',
         'img': 'icdn.png',
-        'text': `<p>I can’t do anything in front of the camera’ is an ironic video.</p>
+        'text': `<p>I can’t do anything in front of the camera is an ironic video.</p>
                  <p>The title is actually a phrase I said after the first take of this video, and the result directly contradicts it—since, in reality, I did many things in front of the camera.</p>
                  <p>It is about the joy of dancing, which can even outweigh the stress of being watched, as well as the disappointment I sometimes feel toward the results of my creations—when they do not align with my initial vision but instead evolve and come to life on their own.</p>`
     },
@@ -49,9 +49,13 @@ var slides = [
 
 var currentIndex = 0;
 
-var isShown = false;
+async function wait(time) {
+    setTimeout(() => {
+        return true;
+    }, time)
+}
 
-function loadSlide(value) {
+async function loadSlide(value) {
     if(value < 0) {
         if(currentIndex + value < 0) {
             currentIndex = slides.length;
@@ -62,8 +66,9 @@ function loadSlide(value) {
         }
     }
     currentIndex += value;
+
+    text_wrapper.style.opacity = 0;
     
-    text_wrapper.innerHTML = '';
     var slide = slides[currentIndex];
     if(!slide) {
         return alert('No slide found!');
@@ -75,23 +80,19 @@ function loadSlide(value) {
         image.src = 'public/img/' + slide['img'];
     }, 300);
 
-    text_wrapper.innerHTML += '<h1>' + slide['header'] + '</h1>';
-    text_wrapper.innerHTML += slide['text'];
-}
-
-function onMouseMove() {
-    if(isShown) {
-        return;
-    }
-    text_wrapper.style.transform = 'translateX(0px)';
-    isShown = true;
+    setTimeout(() => {
+        text_wrapper.innerHTML = '';
+        text_wrapper.innerHTML += '<h1>' + slide['header'] + '</h1>';
+        text_wrapper.innerHTML += slide['text'];
+        text_wrapper.style.opacity = 1;
+    }, 300)
 }
 
 function main() {
-    loadSlide(0);
+    loadSlide(1);
     image.style.opacity = 1;
     setTimeout(() => {
-        document.addEventListener('mousemove', onMouseMove);
+        text_wrapper.style.transform = 'translateX(0px)';
     }, 300);
 
     slide_left.addEventListener('click', () => loadSlide(-1))

@@ -4,9 +4,8 @@ const slide_left = document.querySelector('#slide-left');
 const slide_right = document.querySelector('#slide-right');
 
 var images = [
-    'about.png', 'carrymeplease.png', 'disco.png', 'hair.png', 'icdn.png', 'olives.png', 'paper_running.png', 
-    'preparations.png', 'shadow.png', 'slow_fight.png', 'stupid.png', 't-pose.png', 'ufo.png',
-    'weird.png', 'writing.png'
+    'disco.png',
+    'paper_running.png', 'preparations.png', 'slow_fight.png', 'stupid.png', 't-pose.png', 'weird.png', 'writing.png'
 ];
 
 var currentIndex = 0;
@@ -24,9 +23,10 @@ function loadImage(value) {
     }
     currentIndex += value;
     
-    var img = images[currentIndex];
+    var img = images[currentIndex];    
     image.style.opacity = 0;
     setTimeout(() => {
+        image.src = '';
         image.style.opacity = 1;
         image.src = 'public/img/' + img;
     }, 300);

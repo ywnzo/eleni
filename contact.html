@@ -8,32 +8,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/fd483a54f1.js" crossorigin="anonymous"></script>
+
     <script src="public/js/page_load.js" defer></script>
+    <script src="public/js/hamburger_menu.js" defer></script>
 
     <title>Dance, Reflect & Play</title>
 </head>
 <body>
     <header>
         <nav>
-            <h1 class="clickable"><a href="index.html" >Eleni</a></h1>
+            <a id="logo" class="clickable" href="index.html"><img src="public/img/favicon.png" alt=""></a>
             <div>
                 <a href="workshop.html" class="clickable">Workshop</a>
                 <a href="work.html" class="clickable">My Work</a>
                 <a href="gallery.html" class="clickable">Gallery</a>
                 <a href="contact.html" class="clickable">Contact</a>
+
+                <div id="burger-wrapper">
+                    <i id="burger-closed" class="fa-solid fa-bars"></i>
+                    <i id="burger-opened" class="fa-solid fa-x"></i>
+                </div>
+
+                <div id="burger-menu">
+                    <a href="workshop.html" class="clickable">Workshop</a>
+                    <a href="work.html" class="clickable">My Work</a>
+                    <a href="gallery.html" class="clickable">Gallery</a>
+                    <a href="contact.html" class="clickable">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
         <div id="image-wrapper">
-            <img id="image" src="public/img/olives.png" alt="">
+            <img id="image" src="public/img/contact.jpg" alt="">
 
-            <div id="text-wrapper">
+            <div class="text-wrapper">
                 <h1>Contact</h1>
-                <p>If you want to talk to me or if you are interested in my workshop, please call me or send an email.</p>
-                <p>Phone: <a href="tel:+306907717918">+306907717918</a></p>
-                <p>Email: <a href="mailto:freskoueleni@gmail.com">freskoueleni@gmail.com</a></p>
+                <p>If you want to talk to me or if you are interested in my workshop, please feel free to contact me via my social media or send an email.</p>
+
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <p class="clickable" style="font-size: 3rem;"><a href="https://instagram.com/fres.eleni" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
+                    <p class="clickable" style="font-size: 3rem;"><a href="https://www.facebook.com/share/197G8VPbyi/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></p>
+                    <p class="clickable" style="font-size: 3rem;"><a href="mailto:freskoueleni@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></p>
+                </div>
             </div>
         </div>
     </main>

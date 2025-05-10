@@ -1,20 +1,12 @@
 const image = document.querySelector('#image')
-const text_wrapper = document.querySelector('#text-wrapper')
-
-var isShown = false;
-
-function onMouseMove() {
-    if(isShown) {
-        return;
-    }
-    text_wrapper.style.transform = 'translateX(0px)';
-    isShown = true;
-}
+const text_wrappers = document.querySelectorAll('.text-wrapper')
 
 function main() {
     image.style.opacity = 1;
     setTimeout(() => {
-        document.addEventListener('mousemove', onMouseMove);
+        text_wrappers.forEach(wrapper => {
+            wrapper.style.transform = 'translateX(0px)';
+        })
     }, 300);
 }
 

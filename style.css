@@ -4,7 +4,7 @@
 
     --color-text-main: rgb(50, 50 , 50);
     --color-text-sec: #F44174;
-    --color-main: rgba(210, 210, 210, 0.9);
+    --color-main: rgba(210, 210, 210, 0.75);
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
@@ -29,8 +29,6 @@
 }
 
 html, body {
-    min-width: 400px;
-    min-height: 800px;
     width: 100vw;
     height: 100vh;
     margin: 0px;

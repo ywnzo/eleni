@@ -4,7 +4,7 @@
 
     --color-text-main: rgb(50, 50 , 50);
     --color-text-sec: #F44174;
-    --color-main: rgba(210, 210, 210, 0.9);
+    --color-main: rgba(210, 210, 210, 0.75);
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
@@ -29,8 +29,6 @@
 }
 
 html, body {
-    min-width: 400px;
-    min-height: 800px;
     width: 100vw;
     height: 100vh;
     margin: 0px;
@@ -54,7 +52,7 @@ h1, h2, h3, h4, h5, p {
 
 header {
     width: 100%;
-    height: 4rem;
+    height: 2.5rem;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -68,7 +66,7 @@ header a {
     display: none;
     text-decoration: none;
     color: var(--color-text-main);
-    font-size: x-large;
+    font-size: large;
 }
 header #logo {
     display: flex;
@@ -126,7 +124,7 @@ nav div {
 }
 #burger-menu a {
     display: flex;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 main {
@@ -155,8 +153,7 @@ a:hover {
 
 #image-wrapper {
     width: 100%;
-    height: 90vh;
-    margin-top: 5vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,8 +162,8 @@ a:hover {
 
 #image-wrapper img {
     width: calc(100%);
-    height: calc(100vh - 4rem);
-    margin-top: 4rem;
+    height: calc(100vh - 2.5rem);
+    margin-top: 2.5rem;
     position: absolute;
     object-fit: cover;
     filter: brightness(0.5);
@@ -188,11 +185,11 @@ a:hover {
 
 #image-wrapper .text-wrapper {
     width: calc(var(--width-content));
-    max-height: calc(100vh - 28rem);
+    max-height: calc(100vh - 22rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem;
+    padding: 1.5rem;
     border-radius: 8px;
     z-index: 99;
     transform: translateX(-100vw);
@@ -204,11 +201,11 @@ a:hover {
     scrollbar-width: none;
 }
 #image-wrapper .text-wrapper h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #image-wrapper .text-wrapper p{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 #image-wrapper .text-wrapper a {
     color: var(--color-text-main);
